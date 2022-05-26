@@ -1,5 +1,5 @@
 import "../globalstyle/index.css";
-import "../globalstyle/app.css";
+import "../globalstyle/App.css";
 import "../globalstyle/navbar.css";
 import "../globalstyle/FooterOverlay.css";
 import "../globalstyle/Newsletter.css";
