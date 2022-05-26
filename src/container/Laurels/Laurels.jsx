@@ -1,8 +1,7 @@
 import React from "react";
 
 import { SubHeading } from "../../components";
-import { images, data } from "../../constants";
-import "./Laurels.css";
+import { data } from "../../constants";
 
 const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
   <div className="app__laurels_awards-card">
@@ -30,7 +29,7 @@ const Laurels = () => (
     </div>
 
     <div className="app__wrapper_img">
-      <img src={images.laurels} alt="laurels_img" />
+      <img src="/images/laurels.png" alt="laurels_img" />
     </div>
   </div>
 );

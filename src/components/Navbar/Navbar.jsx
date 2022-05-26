@@ -3,17 +3,17 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { projectName } from "../../constants/siteConfig";
 import menuData from "../../constants/data/menuData";
-import "./Navbar.css";
+import { AppNavbar, AppNavbarLinks, AppNavbarLogo } from "./styled";
+import FooterHeading from "../FooterHeading";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   return (
-    <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        {/*<img src={images.gericht} alt="app__logo" />*/}
-        <h1 className="app__footer-headtext">{projectName}</h1>
-      </div>
-      <ul className="app__navbar-links">
+    <AppNavbar>
+      <AppNavbarLogo>
+        <FooterHeading>{projectName}</FooterHeading>
+      </AppNavbarLogo>
+      <AppNavbarLinks>
         {menuData.map((item) => {
           return (
             <li className="p__opensans" key={item.path}>
@@ -21,16 +21,8 @@ const Navbar = () => {
             </li>
           );
         })}
-      </ul>
-      {/*<div className="app__navbar-login">
-        <a href="#login" className="p__opensans">
-          Log In / Registration
-        </a>
-        <div />
-        <a href="/" className="p__opensans">
-          Book Table
-        </a>
-      </div>*/}
+      </AppNavbarLinks>
+
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
           color="#fff"
@@ -58,7 +50,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </nav>
+    </AppNavbar>
   );
 };
 

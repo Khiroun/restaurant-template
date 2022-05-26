@@ -1,8 +1,8 @@
 import React from "react";
 
 import { SubHeading, MenuItem } from "../../components";
-import { data, images } from "../../constants";
-import "./SpecialMenu.css";
+import { data } from "../../constants";
+//import "./SpecialMenu.css";
 
 const SpecialMenu = () => (
   <div className="app__specialMenu flex__center section__padding" id="menu">
@@ -27,7 +27,7 @@ const SpecialMenu = () => (
       </div>
 
       <div className="app__specialMenu-menu_img">
-        <img src={images.menu} alt="menu__img" />
+        <img src="/images/menu.png" alt="menu__img" />
       </div>
 
       <div className="app__specialMenu-menu_cocktails  flex__center">

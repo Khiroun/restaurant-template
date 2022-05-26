@@ -1,8 +1,7 @@
 import React from "react";
 
-import { images } from "../../constants";
 import { projectName } from "../../constants/siteConfig";
-import "./AboutUs.css";
+//import "./AboutUs.css";
 
 const AboutUs = () => (
   <div
@@ -10,13 +9,13 @@ const AboutUs = () => (
     id="about"
   >
     <div className="app__aboutus-overlay flex__center">
-      <img src={images.G} alt="G_overlay" />
+      <img src="/images/G.png" alt="G_overlay" />
     </div>
 
     <div className="app__aboutus-content flex__center">
       <div className="app__aboutus-content_about">
         <h1 className="headtext__cormorant">A propos</h1>
-        <img src={images.spoon} alt="about_spoon" className="spoon__img" />
+        <img src="/images/spoon.svg" alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra
           adipiscing ultrices vulputate posuere tristique. In sed odio nec
@@ -28,12 +27,12 @@ const AboutUs = () => (
       </div>
 
       <div className="app__aboutus-content_knife flex__center">
-        <img src={images.knife} alt="about_knife" />
+        <img src="images/knife.png" alt="about_knife" />
       </div>
 
       <div className="app__aboutus-content_history">
         <h1 className="headtext__cormorant">{projectName}</h1>
-        <img src={images.spoon} alt="about_spoon" className="spoon__img" />
+        <img src="/images/spoon.svg" alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">
           Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat.
           Risus placerat morbi volutpat habitasse interdum mi aliquam In sed

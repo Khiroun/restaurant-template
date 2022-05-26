@@ -1,8 +1,7 @@
-import React from 'react';
-import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
+import React from "react";
+import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 
-import { meal } from '../../constants';
-import './Intro.css';
+//import './Intro.css';
 
 const Intro = () => {
   const [playVideo, setPlayVideo] = React.useState(false);
@@ -12,7 +11,7 @@ const Intro = () => {
     <div className="app__video">
       <video
         ref={vidRef}
-        src={meal}
+        src="/meal.mp4"
         type="video/mp4"
         loop
         controls={false}

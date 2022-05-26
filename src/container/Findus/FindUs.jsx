@@ -1,7 +1,6 @@
 import React from "react";
 
 import { SubHeading } from "../../components";
-import { images } from "../../constants";
 import openingHours from "../../constants/data/openingHours";
 import { displayAddress } from "../../constants/siteConfig";
 
@@ -40,7 +39,7 @@ const FindUs = () => (
     </div>
 
     <div className="app__wrapper_img">
-      <img src={images.findus} alt="finus_img" />
+      <img src="/images/findus.png" alt="finus_img" />
     </div>
   </div>
 );

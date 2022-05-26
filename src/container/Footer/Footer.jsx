@@ -2,13 +2,13 @@ import React from "react";
 import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 
 import { FooterOverlay, Newsletter } from "../../components";
-import { images } from "../../constants";
+import FooterHeading from "../../components/FooterHeading";
 import {
   displayAddress,
   phoneNumbers,
   projectName,
 } from "../../constants/siteConfig";
-import "./Footer.css";
+//import "./Footer.css";
 
 const Footer = () => (
   <div className="app__footer section__padding" id="login">
@@ -17,7 +17,7 @@ const Footer = () => (
 
     <div className="app__footer-links">
       <div className="app__footer-links_contact">
-        <h1 className="app__footer-headtext">Réservez maitenant</h1>
+        <FooterHeading>Réservez maitenant</FooterHeading>
         <p className="p__opensans">{displayAddress}</p>
         {phoneNumbers.map((pn) => {
           return (
@@ -29,14 +29,13 @@ const Footer = () => (
       </div>
 
       <div className="app__footer-links_logo">
-        {/*<img src={images.gericht} alt="footer_logo" />*/}
-        <h2 className="app__footer-headtext">{projectName}</h2>
+        <FooterHeading>{projectName}</FooterHeading>
         <p className="p__opensans">
           {`"La meilleure façon de se retrouver est de se perdre au service des
           autres."`}
         </p>
         <img
-          src={images.spoon}
+          src="/images/spoon.svg"
           className="spoon__img"
           style={{ marginTop: 15 }}
         />
@@ -48,7 +47,7 @@ const Footer = () => (
       </div>
 
       <div className="app__footer-links_work">
-        <h1 className="app__footer-headtext">{`Heures d'ouverture`}</h1>
+        <FooterHeading>{`Heures d'ouverture`}</FooterHeading>
         <p className="p__opensans">Monday-Friday:</p>
         <p className="p__opensans">08:00 am - 12:00 am</p>
         <p className="p__opensans">Saturday-Sunday:</p>
