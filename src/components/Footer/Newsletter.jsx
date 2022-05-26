@@ -7,8 +7,9 @@ const Newsletter = () => (
   <div className="app__newsletter">
     <div className="app__newsletter-heading">
       <SubHeading title="Offre spéciale" />
-      <h1 className="headtext__cormorant">Pour 9500da seulement</h1>
+      <h1 className="headtext__cormorant">Pour 18 000 da seulement</h1>
       <p className="p__opensans">Créez le site idéal pour votre restaurant</p>
+      <p className="p__opensans">{"offre valable jusqu'au 01/07/2022"}</p>
     </div>
     {/*<div className="app__newsletter-input flex__center">
       <input type="email" placeholder="Enter your email address" />

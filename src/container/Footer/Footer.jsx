@@ -41,9 +41,9 @@ const Footer = () => (
           style={{ marginTop: 15 }}
         />
         <div className="app__footer-links_icons">
-          <FiFacebook />
-          <FiTwitter />
-          <FiInstagram />
+          <a href="https://www.instagram.com/ayssel.tech/">
+            <FiInstagram />
+          </a>
         </div>
       </div>
 

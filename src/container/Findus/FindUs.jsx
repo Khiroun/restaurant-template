@@ -28,7 +28,7 @@ const FindUs = () => (
           );
         })}
       </div>
-      <a href="mailto:ayssel.tech@gmail.com">
+      <a href="mailto:admin@aysseltech.com">
         <button
           type="button"
           className="custom__button"
