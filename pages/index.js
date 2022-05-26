@@ -1,5 +1,5 @@
 import React from "react";
-
+import Head from "next/head";
 import {
   AboutUs,
   Chef,
@@ -15,6 +15,9 @@ import { Navbar } from "../src/components";
 
 const App = () => (
   <div>
+    <Head>
+      <title>Création de sites web en Algérie | Ayssel tech</title>
+    </Head>
     <Navbar />
     <Header />
     <AboutUs />
