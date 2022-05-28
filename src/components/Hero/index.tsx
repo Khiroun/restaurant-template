@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import colors from "../../constants/colors";
+import Link from "next/link";
 const StyledHero = styled.header`
   background: url(/images/hero.jpg) fixed no-repeat;
   background-size: cover;
@@ -184,7 +185,7 @@ const Hero = () => {
         <Container>
           <Navbar>
             <NavbarBrand href="/">
-              <img src="/images/logo-white-transparent.png" />
+              <img src="/images/logo-white-transparent.png" alt="" />
             </NavbarBrand>
             <NavItemsContainer>
               <NavItems>
@@ -192,7 +193,7 @@ const Hero = () => {
                   <a href="#notre-offre">Notre offre</a>
                 </NavItem>
                 <NavItem>
-                  <a href="/demo">Voir la démo</a>
+                  <Link href="/demo">Voir la démo</Link>
                 </NavItem>
                 <NavItem>
                   <a href="#contact">Contact</a>

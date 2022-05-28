@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import styled from "styled-components";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -135,7 +135,7 @@ const Create1 = () => {
                 setChoices({ ...choices, [stepId]: nextFont.family })
               }
               sort="popularity"
-            />*/}
+            />*/ /*}
             <h4 className="apply-font">
               The font will be applied to this text.
             </h4>
@@ -238,5 +238,13 @@ const Indicator = styled.div<{ active: boolean }>`
   background-color: ${(props) =>
     props.active ? colors.primary.dark : colors.primary.light + "99"};
 `;
+
+export default Create1;*/
+
+import React from "react";
+
+const Create1 = () => {
+  return <div>Create1</div>;
+};
 
 export default Create1;
