@@ -6,11 +6,11 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import colors from "../constants/colors";
 import { FaCamera } from "react-icons/fa";
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 
-const FontPicker = dynamic(() => import("font-picker-react"), { ssr: false });
+//const FontPicker = dynamic(() => import("font-picker-react"), { ssr: false });
 //#font key : AIzaSyASIKW1b-hE-Xwnb5H4G69qGzbFFWUAzl4
-const fontKey = "AIzaSyASIKW1b-hE-Xwnb5H4G69qGzbFFWUAzl4";
+//const fontKey = "AIzaSyASIKW1b-hE-Xwnb5H4G69qGzbFFWUAzl4";
 type Choices = {
   name: string;
   logo: File | null;
@@ -128,14 +128,14 @@ const Create1 = () => {
         )}
         {currentstep.type === "font" && (
           <div>
-            <FontPicker
+            {/*<FontPicker
               apiKey={fontKey}
               activeFontFamily={choices.font}
               onChange={(nextFont) =>
                 setChoices({ ...choices, [stepId]: nextFont.family })
               }
               sort="popularity"
-            />
+            />*/}
             <h4 className="apply-font">
               The font will be applied to this text.
             </h4>
