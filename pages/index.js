@@ -1,34 +1,19 @@
 import React from "react";
 import Head from "next/head";
-import {
-  AboutUs,
-  Chef,
-  FindUs,
-  Footer,
-  Gallery,
-  Header,
-  Intro,
-  Laurels,
-  SpecialMenu,
-} from "../src/container";
-import { Navbar } from "../src/components";
+import Hero from "../src/components/Hero";
+import Services from "../src/components/Services";
+import ContactSection from "../src/components/ContactSection";
+const home = () => {
+  return (
+    <div>
+      <Head>
+        <title>Création de sites web en Algérie | Ayssel tech</title>
+      </Head>
+      <Hero />
+      <Services />
+      <ContactSection />
+    </div>
+  );
+};
 
-const App = () => (
-  <div>
-    <Head>
-      <title>Création de sites web en Algérie | Ayssel tech</title>
-    </Head>
-    <Navbar />
-    <Header />
-    <AboutUs />
-    <SpecialMenu />
-    <Chef />
-    <Intro />
-    <Laurels />
-    <Gallery />
-    <FindUs />
-    <Footer />
-  </div>
-);
-
-export default App;
+export default home;
