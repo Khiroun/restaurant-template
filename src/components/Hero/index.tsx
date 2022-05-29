@@ -3,8 +3,9 @@ import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import colors from "../../constants/colors";
 import Link from "next/link";
+import Image from "next/image";
 const StyledHero = styled.header`
-  background: url(/images/hero.jpg) fixed no-repeat;
+  background: url(/images/hero.avif) fixed no-repeat;
   background-size: cover;
   color: #fff;
   overflow: hidden;
@@ -185,7 +186,13 @@ const Hero = () => {
         <Container>
           <Navbar>
             <NavbarBrand href="/">
-              <img src="/images/logo-white-transparent.png" alt="" />
+              <Image
+                src="/images/logo-white-transparent.png"
+                alt=""
+                layout="intrinsic"
+                width={100}
+                height={100}
+              />
             </NavbarBrand>
             <NavItemsContainer>
               <NavItems>
