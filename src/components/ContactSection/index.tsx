@@ -64,6 +64,9 @@ const ImageSection = styled(Grid)`
   img {
     object-fit: cover;
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const ContactSection = () => {
   return (
@@ -89,7 +92,7 @@ const ContactSection = () => {
             </a>
           </Content>
           <ImageSection item xs={12} sm={6}>
-            <img src="/images/findus.avif" width="100%" height="100%" />
+            <img src="/images/findus.avif" width="350px" height="400px" />
           </ImageSection>
         </Grid>
       </Container>
