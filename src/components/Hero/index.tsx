@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import colors from "../../constants/colors";
 import Link from "next/link";
-import Image from "next/image";
 const StyledHero = styled.header`
   background: url(/images/hero.avif) fixed no-repeat;
   background-size: cover;
@@ -57,15 +56,6 @@ const NavbarBrand = styled.a`
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   background-color: transparent;
-  img {
-    width: 3.5em;
-    @media (max-width: 768px) {
-      width: 2.5em;
-    }
-    @media (max-width: 576px) {
-      width: 2em;
-    }
-  }
 `;
 const NavItemsContainer = styled.div`
   display: flex !important;
@@ -186,12 +176,11 @@ const Hero = () => {
         <Container>
           <Navbar>
             <NavbarBrand href="/">
-              <Image
-                src="/images/logo-white-transparent.png"
-                alt=""
-                layout="intrinsic"
-                width={100}
-                height={100}
+              <img
+                src="/images/logo-white-transparent.webp"
+                alt="logo"
+                width="100px"
+                height="100px"
               />
             </NavbarBrand>
             <NavItemsContainer>
