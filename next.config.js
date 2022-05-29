@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const nextConfig = {
   reactStrictMode: true,
@@ -7,4 +8,11 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = {
+  webpack: function (config) {
+    config.plugins.push(new CompressionPlugin());
+
+    return config;
+  },
+  ...nextConfig,
+};
