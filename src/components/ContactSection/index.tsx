@@ -5,6 +5,7 @@ import { IoIosMailUnread } from "react-icons/io";
 import { BsFillTelephoneFill, BsWhatsapp } from "react-icons/bs";
 import styled from "styled-components";
 import colors from "../../constants/colors";
+import Image from "next/image";
 const Section = styled.section`
   position: relative;
   background: #f9f9f9;
@@ -92,7 +93,7 @@ const ContactSection = () => {
             </a>
           </Content>
           <ImageSection item xs={12} sm={6}>
-            <img src="/images/findus.avif" width="350px" height="400px" />
+            <Image src="/images/findus.png" layout="fill" />
           </ImageSection>
         </Grid>
       </Container>
