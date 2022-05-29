@@ -10,7 +10,11 @@ const nextConfig = {
 
 module.exports = {
   webpack: function (config) {
-    config.plugins.push(new CompressionPlugin());
+    config.plugins.push(
+      new CompressionPlugin({
+        test: /\.js$|\.css$|\.html$/,
+      })
+    );
 
     return config;
   },
