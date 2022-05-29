@@ -89,7 +89,7 @@ const ContactSection = () => {
             </a>
           </Content>
           <ImageSection item xs={12} sm={6}>
-            <img src="/images/findus.avif" width="100%" />
+            <img src="/images/findus.avif" width="100%" height="100%" />
           </ImageSection>
         </Grid>
       </Container>
