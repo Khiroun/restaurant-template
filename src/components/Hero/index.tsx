@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import colors from "../../constants/colors";
-import Link from "next/link";
+import Navbar from "./Navbar";
 const StyledHero = styled.header`
   background: url(/images/hero.avif) fixed no-repeat;
   background-size: cover;
@@ -36,72 +36,7 @@ const Container = styled.div`
   margin-left: auto;
   z-index: 99;
 `;
-const Navbar = styled.nav`
-  padding: 15px 0;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  position: relative;
-  display: flex;
-  align-items: center;
-`;
-const NavbarBrand = styled.a`
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-  color: ${colors.primary.light};
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  background-color: transparent;
-`;
-const NavItemsContainer = styled.div`
-  display: flex !important;
-  flex-basis: auto;
-  flex-grow: 1;
-  align-items: center;
-`;
-const NavItems = styled.ul`
-  flex-direction: row;
-  margin-left: auto !important;
-  display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-const NavItem = styled.li`
-  list-style: none;
-  a {
-    color: #fff;
-    font-size: 14px;
-    padding: 5px 0px;
-    margin-left: 30px;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-    background-color: transparent;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      transition: all 0.3s ease-out 0s;
-      background-color: ${colors.primary.light};
-    }
-    &:hover {
-      color: ${colors.primary.light};
-    }
-    &:hover::before {
-      width: 60%;
-    }
-  }
-`;
+
 const Row = styled(Grid)`
   justify-content: center;
 `;
@@ -174,29 +109,7 @@ const Hero = () => {
     <StyledHero>
       <Navigation>
         <Container>
-          <Navbar>
-            <NavbarBrand href="/">
-              <img
-                src="/images/logo-white-transparent.webp"
-                alt="logo"
-                width="100px"
-                height="100px"
-              />
-            </NavbarBrand>
-            <NavItemsContainer>
-              <NavItems>
-                <NavItem>
-                  <a href="#notre-offre">Notre offre</a>
-                </NavItem>
-                <NavItem>
-                  <Link href="/demo">Voir la démo</Link>
-                </NavItem>
-                <NavItem>
-                  <a href="#contact">Contact</a>
-                </NavItem>
-              </NavItems>
-            </NavItemsContainer>
-          </Navbar>
+          <Navbar />
         </Container>
       </Navigation>
       <Container
