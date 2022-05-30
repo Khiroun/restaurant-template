@@ -8,6 +8,10 @@ const home = () => {
     <div>
       <Head>
         <title>Création de sites web en Algérie | Ayssel tech</title>
+        <meta
+          name="description"
+          content="Création de sites web, sites vitrines, sites pros, ecommerces en Algérie utilisant les technologies modernes tel que React, React native et Nodejs | Ayssel tech"
+        />
       </Head>
       <Hero />
       <Services />

@@ -7,10 +7,11 @@ import createEmotionCache from "../src/createEmotionCache";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="fr">
+      <Html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link
             rel="stylesheet"
