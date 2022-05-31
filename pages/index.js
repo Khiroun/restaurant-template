@@ -12,6 +12,11 @@ const home = () => {
           name="description"
           content="Création de sites web, sites vitrines, sites pros, ecommerces en Algérie utilisant les technologies modernes tel que React, React native et Nodejs | Ayssel tech"
         />
+        <link
+          rel="canonical"
+          href="https://www.aysseltech.com/
+"
+        ></link>
       </Head>
       <Hero />
       <Services />
