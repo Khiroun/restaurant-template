@@ -1,11 +1,15 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import BusinessCardEditor from "../../../src/components/BusinessCardEditor";
 import Navbar from "../../../src/components/Hero/Navbar";
 import colors from "../../../src/constants/colors";
 
 const Edit = () => {
   const router = useRouter();
+  useEffect(() => {
+    screen.orientation.lock("landscape").catch(() => {});
+  }, []);
   const { id } = router.query;
   if (typeof id !== "string") return null;
   return (
