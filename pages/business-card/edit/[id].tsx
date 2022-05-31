@@ -35,7 +35,7 @@ const Edit = () => {
         />
         <meta
           property="og:image"
-          content="https://www.aysseltech.com/static/images/business-card.webp"
+          content="https://www.aysseltech.com/images/modele1.PNG"
         />
         <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="1200" />
@@ -62,6 +62,10 @@ const Edit = () => {
         style={{
           backgroundColor: colors.secondary.dark,
           padding: "0 20px",
+        }}
+        brandImageSize="60px"
+        dropdownButtonStyle={{
+          transform: "translateX(-20px)",
         }}
       />
       <BusinessCardEditor id={id} />

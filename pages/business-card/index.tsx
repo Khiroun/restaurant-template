@@ -30,7 +30,7 @@ const BusinessCard = () => {
         />
         <meta
           property="og:image"
-          content="https://www.aysseltech.com/static/images/business-card.webp"
+          content="https://www.aysseltech.com/images/bussiness-card-header.webp"
         />
         <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="1200" />
@@ -57,6 +57,10 @@ const BusinessCard = () => {
         style={{
           backgroundColor: colors.secondary.dark,
           padding: "0 20px",
+        }}
+        brandImageSize="60px"
+        dropdownButtonStyle={{
+          transform: "translateX(-20px)",
         }}
       />
       <BussinessCardHeader />

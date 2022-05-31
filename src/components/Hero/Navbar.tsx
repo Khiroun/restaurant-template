@@ -123,19 +123,25 @@ const DropdownNavItem = styled.li`
 `;
 type Props = {
   style?: React.CSSProperties;
+  brandImageSize?: string;
+  dropdownButtonStyle?: React.CSSProperties;
 };
-const Navbar: React.FC<Props> = ({ style }) => {
+const Navbar: React.FC<Props> = ({
+  style,
+  brandImageSize,
+  dropdownButtonStyle,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((isOpen) => !isOpen);
-
+  console.log({ brandImageSize });
   return (
     <StyledNavbar style={style}>
       <NavbarBrand href="/">
         <img
           src="/images/logo-white-transparent.webp"
           alt="logo"
-          width="100px"
-          height="100px"
+          width={brandImageSize || "100px"}
+          height={brandImageSize || "100px"}
         />
       </NavbarBrand>
       <NavItemsContainer>
@@ -147,7 +153,7 @@ const Navbar: React.FC<Props> = ({ style }) => {
           ))}
         </NavItems>
       </NavItemsContainer>
-      <DropdownButton onClick={toggle}>
+      <DropdownButton onClick={toggle} style={dropdownButtonStyle}>
         <HamburgerIcon />
       </DropdownButton>
       {
