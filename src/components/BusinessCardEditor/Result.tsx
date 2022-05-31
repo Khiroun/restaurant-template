@@ -40,9 +40,6 @@ const BusinessCardHeader = styled.div<{ color: string }>`
     height: 40%;
   }
 `;
-type Props = {
-  color: string;
-};
 const Logo = styled.img`
   border-radius: 100%;
   //background-color: #fff;
@@ -72,7 +69,12 @@ const Tag = styled.input`
   background: transparent;
   border: transparent;
 `;
-const Result: React.FC<Props> = ({ color }) => {
+
+type Props = {
+  color: string;
+  openControl: () => void;
+};
+const Result: React.FC<Props> = ({ color, openControl }) => {
   const [logoImage, setLogoImage] = useState<string>(
     "/images/logo-white-transparent.webp"
   );
@@ -81,7 +83,7 @@ const Result: React.FC<Props> = ({ color }) => {
   return (
     <Container>
       <BusinessCard>
-        <BusinessCardHeader color={color}>
+        <BusinessCardHeader color={color} onClick={openControl}>
           <div
             style={{
               display: "flex",
