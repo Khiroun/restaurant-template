@@ -133,7 +133,6 @@ const Navbar: React.FC<Props> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((isOpen) => !isOpen);
-  console.log({ brandImageSize });
   return (
     <StyledNavbar style={style}>
       <NavbarBrand href="/">
