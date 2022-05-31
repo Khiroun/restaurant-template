@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   AiOutlineFacebook,
   AiOutlineMail,
@@ -34,7 +35,15 @@ const InfoItem = styled.div`
 const InfoItemIconWrapper = styled.div`
   margin-right: 10px;
 `;
+const TextInput = styled.input`
+  border: none;
+`;
 const BusinessCardContent = () => {
+  const [name, setName] = useState("Mr/Mme Nom Prenom");
+  const [phone, setPhone] = useState("0557288711");
+  const [email, setEmail] = useState("admin@aysseltech.com");
+  const [facebook, setFacebook] = useState("facebook.com/ayssel.tech");
+  const [address, setAddress] = useState("El Harrach, Alger");
   return (
     <Container>
       <InfoSection>
@@ -42,31 +51,37 @@ const BusinessCardContent = () => {
           <InfoItemIconWrapper>
             <AiOutlineStar />
           </InfoItemIconWrapper>
-          <p>Mr/Mme Nom Prenom</p>
+          <TextInput value={name} onChange={(e) => setName(e.target.value)} />
         </InfoItem>
         <InfoItem>
           <InfoItemIconWrapper>
             <AiOutlinePhone />
           </InfoItemIconWrapper>
-          <p>0557288711</p>
+          <TextInput value={phone} onChange={(e) => setPhone(e.target.value)} />
         </InfoItem>
         <InfoItem>
           <InfoItemIconWrapper>
             <AiOutlineMail />
           </InfoItemIconWrapper>
-          <p>admin@aysseltech.com</p>
+          <TextInput value={email} onChange={(e) => setEmail(e.target.value)} />
         </InfoItem>
         <InfoItem>
           <InfoItemIconWrapper>
             <AiOutlineFacebook />
           </InfoItemIconWrapper>
-          <p>facebook.com/ayssel.tech</p>
+          <TextInput
+            value={facebook}
+            onChange={(e) => setFacebook(e.target.value)}
+          />
         </InfoItem>
         <InfoItem>
           <InfoItemIconWrapper>
             <GoLocation />
           </InfoItemIconWrapper>
-          <p>El Harrach, Alger</p>
+          <TextInput
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
         </InfoItem>
       </InfoSection>
       <QRSection>
