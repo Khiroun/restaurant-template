@@ -129,7 +129,7 @@ const Hero = () => {
                 pendant un an!!.
               </p>
               <Action>
-                <ContactButton href="/">Nous contacter</ContactButton>
+                <ContactButton href="#contact">Nous contacter</ContactButton>
                 <DemoButton href="/demo">Voir la démo</DemoButton>
               </Action>
             </ContentsTextCenter>
