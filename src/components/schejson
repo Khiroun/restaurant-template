@@ -1,0 +1,26 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "logo": {
+      "width": "2000 px",
+      "height": "641 px",
+      "name": "Canva Logo",
+      "url": "https://static-cse.canva.com/_next/static/assets/logo.2000x641.3e004a63462de0986fc584e9b0668e4b.png",
+      "@type": "ImageObject"
+    },
+    "name": "Canva",
+    "url": "https://www.canva.com",
+    "sameAs": [
+      "https://www.facebook.com/canva/",
+      "https://twitter.com/canva",
+      "https://www.instagram.com/canva/",
+      "https://www.linkedin.com/company/canva/",
+      "https://en.wikipedia.org/wiki/Canva",
+      "https://github.com/Canva"
+    ],
+    "@type": "Organization"
+  },
+  "description": "Faites vos cartes de visite avec notre outil en ligne intuitif & facile - Superbes modèles à personnaliser - 100 % gratuit !",
+  "name": "Faire des cartes de visite gratuites à imprimer en ligne | Canva"
+}

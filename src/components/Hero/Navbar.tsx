@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import colors from "../../constants/colors";
+import navbarData from "./navData";
 
 const StyledNavbar = styled.nav`
   padding: 15px 0;
@@ -94,7 +95,7 @@ const DropdownMenu = styled.div<{ isOpen: boolean }>`
   position: fixed;
   left: 0;
   right: 0;
-  top: ${(props) => (props.isOpen ? "0" : "-100%")};
+  top: ${(props) => (props.isOpen ? "0" : "-100vh")};
   height: 100vh;
   background-color: ${colors.primary.dark};
   z-index: 100;
@@ -120,12 +121,15 @@ const DropdownNavItem = styled.li`
   margin-bottom: 1rem;
   list-style: none;
 `;
-const Navbar = () => {
+type Props = {
+  style?: React.CSSProperties;
+};
+const Navbar: React.FC<Props> = ({ style }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((isOpen) => !isOpen);
 
   return (
-    <StyledNavbar>
+    <StyledNavbar style={style}>
       <NavbarBrand href="/">
         <img
           src="/images/logo-white-transparent.webp"
@@ -136,15 +140,11 @@ const Navbar = () => {
       </NavbarBrand>
       <NavItemsContainer>
         <NavItems>
-          <NavItem>
-            <a href="#notre-offre">Notre offre</a>
-          </NavItem>
-          <NavItem>
-            <Link href="/demo">Voir la démo</Link>
-          </NavItem>
-          <NavItem>
-            <a href="#contact">Contact</a>
-          </NavItem>
+          {navbarData.map((item) => (
+            <NavItem key={item.name}>
+              <Link href={item.href}>{item.name}</Link>
+            </NavItem>
+          ))}
         </NavItems>
       </NavItemsContainer>
       <DropdownButton onClick={toggle}>
@@ -154,15 +154,11 @@ const Navbar = () => {
         <DropdownMenu isOpen={isOpen}>
           <CloseIcon onClick={toggle} />
           <DropdownNav>
-            <DropdownNavItem onClick={toggle}>
-              <a href="#notre-offre">Notre offre</a>
-            </DropdownNavItem>
-            <DropdownNavItem onClick={toggle}>
-              <Link href="/demo">Voir la démo</Link>
-            </DropdownNavItem>
-            <DropdownNavItem onClick={toggle}>
-              <a href="#contact">Contact</a>
-            </DropdownNavItem>
+            {navbarData.map((item) => (
+              <DropdownNavItem onClick={toggle} key={item.name}>
+                <Link href={item.href}>{item.name}</Link>
+              </DropdownNavItem>
+            ))}
           </DropdownNav>
         </DropdownMenu>
       }

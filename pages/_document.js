@@ -7,7 +7,7 @@ import createEmotionCache from "../src/createEmotionCache";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
+      <Html lang="fr-FR" dir="ltr" prefix="og: https://ogp.me/ns#" class>
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
