@@ -49,9 +49,6 @@ const Logo = styled.img`
     width: 50px;
     height: 50px;
   }
-  @media screen and (max-width: 370px) {
-    transform: translateX(-30px);
-  }
 `;
 const Heading = styled.input`
   font-size: 17pt;
@@ -60,6 +57,7 @@ const Heading = styled.input`
   color: #fff;
   background: transparent;
   border: transparent;
+  width: 50%;
 `;
 const Tag = styled.input`
   margin: 0;
@@ -68,6 +66,7 @@ const Tag = styled.input`
   color: #ccc;
   background: transparent;
   border: transparent;
+  width: 50%;
 `;
 
 type Props = {
