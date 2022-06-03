@@ -1,6 +1,91 @@
 import { useState } from "react";
 import styled from "styled-components";
 import BusinessCardContent from "./BusinessCardContent";
+
+type InfoType = {
+  name: string;
+  phone: string;
+  email: string;
+  facebook: string;
+  address: string;
+};
+
+type Props = {
+  color: string;
+  openControl: () => void;
+  heading: string;
+  setHeading: (heading: string) => void;
+  tag: string;
+  setTag: (tag: string) => void;
+  setLogo: (logo: File | null) => void;
+  info: InfoType;
+  setInfo: (info: InfoType) => void;
+};
+const Result: React.FC<Props> = ({
+  color,
+  openControl,
+  heading,
+  setHeading,
+  tag,
+  setTag,
+  setLogo,
+  info,
+  setInfo,
+}) => {
+  const [logoImage, setLogoImage] = useState(
+    "/images/logo-white-transparent.webp"
+  );
+
+  return (
+    <Container>
+      <BusinessCard>
+        <BusinessCardHeader color={color} onClick={openControl}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              justifyContent: "space-between",
+              padding: "10px 20px",
+            }}
+          >
+            <Heading
+              type="text"
+              value={heading}
+              onChange={(e) => setHeading(e.target.value)}
+            />
+            <Tag value={tag} onChange={(e) => setTag(e.target.value)} />
+          </div>
+          <div>
+            <input
+              type="file"
+              accept="image/*"
+              multiple={false}
+              id="logoInput"
+              style={{ display: "none" }}
+              onChange={(e) => {
+                const file = e.target.files && e.target.files[0];
+                setLogo(file);
+                if (file) {
+                  const reader = new FileReader();
+                  reader.readAsDataURL(file);
+                  reader.onload = () => {
+                    setLogoImage(reader.result as string);
+                  };
+                }
+              }}
+            />
+            <label htmlFor="logoInput">
+              <Logo src={logoImage} alt="logo" />
+            </label>
+          </div>
+        </BusinessCardHeader>
+        <BusinessCardContent info={info} setInfo={setInfo} />
+      </BusinessCard>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   min-height: 60vh;
   display: flex;
@@ -68,64 +153,5 @@ const Tag = styled.input`
   border: transparent;
   width: 50%;
 `;
-
-type Props = {
-  color: string;
-  openControl: () => void;
-};
-const Result: React.FC<Props> = ({ color, openControl }) => {
-  const [logoImage, setLogoImage] = useState<string>(
-    "/images/logo-white-transparent.webp"
-  );
-  const [heading, setHeading] = useState("Entreprise");
-  const [tag, setTag] = useState("Entrepreneur");
-  return (
-    <Container>
-      <BusinessCard>
-        <BusinessCardHeader color={color} onClick={openControl}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-              justifyContent: "space-between",
-              padding: "10px 20px",
-            }}
-          >
-            <Heading
-              type="text"
-              value={heading}
-              onChange={(e) => setHeading(e.target.value)}
-            />
-            <Tag value={tag} onChange={(e) => setTag(e.target.value)} />
-          </div>
-          <div>
-            <input
-              type="file"
-              accept="image/*"
-              multiple={false}
-              id="logoInput"
-              style={{ display: "none" }}
-              onChange={(e) => {
-                const file = e.target.files && e.target.files[0];
-                if (file) {
-                  const reader = new FileReader();
-                  reader.readAsDataURL(file);
-                  reader.onload = () => {
-                    setLogoImage(reader.result as string);
-                  };
-                }
-              }}
-            />
-            <label htmlFor="logoInput">
-              <Logo src={logoImage} alt="logo" />
-            </label>
-          </div>
-        </BusinessCardHeader>
-        <BusinessCardContent />
-      </BusinessCard>
-    </Container>
-  );
-};
 
 export default Result;
