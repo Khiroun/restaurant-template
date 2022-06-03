@@ -14,10 +14,10 @@ const PostedMessage = () => {
   return (
     <Container>
       <img src="/images/sent.svg" />
-      <h1>Votre message a bien été envoyé</h1>
+      <h1>{"Votre message a bien été envoyé"}</h1>
       <Link href="/">
         <Button variant="contained" size="large" color="primary">
-          Aller à l'accueil
+          {"Aller à l'accueil"}
         </Button>
       </Link>
     </Container>
