@@ -16,6 +16,7 @@ const TrySection = () => {
       }}
       padding="150px 0"
       minHeight="600px"
+      id="tryUs"
     >
       <Container>
         <DemoRequestModal open={modalOpen} close={() => setModalOpen(false)} />

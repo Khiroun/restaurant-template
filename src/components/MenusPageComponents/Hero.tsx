@@ -8,14 +8,14 @@ const Hero = () => {
       <Content>
         <Grid container style={{ alignItems: "center" }}>
           <ContentLeft lg={6} md={6} item>
-            <HeaderPhone href="/" />
+            <HeaderPhone href="#tryUs" />
           </ContentLeft>
           <ContentRight lg={6} md={6} item>
             <Title>
               Créez un <b>menu QR sans contact</b> pour votre restaurant
             </Title>
             <Action>
-              <ContactButton href="#contact">Réserver une démo</ContactButton>
+              <ContactButton href="#tryUs">Réserver une démo</ContactButton>
             </Action>
           </ContentRight>
           <BigTitle lg={12} item>
